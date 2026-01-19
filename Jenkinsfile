@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Uncomment if firebase-tools is not installed on your agent
-                // sh 'npm install -g firebase-tools'
+                sh 'npm install -g firebase-tools'
             }
         }
 
