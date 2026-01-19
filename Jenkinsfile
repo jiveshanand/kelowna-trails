@@ -17,15 +17,6 @@ pipeline {
             }
         }
 
-        stage('Testing Environment') {
-            steps {
-                echo 'Deploying to Testing Environment...'
-                sh "firebase deploy -P devops-proj-testing --token ${FIREBASE_DEPLOY_TOKEN}"
-                
-                input message: 'After testing, do you want to continue with Staging Environment?'
-            }
-        }
-
         stage('Staging Environment') {
             steps {
                 echo 'Deploying to Staging Environment...'
